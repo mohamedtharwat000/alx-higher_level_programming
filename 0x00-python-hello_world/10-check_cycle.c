@@ -7,20 +7,15 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *head = list, *current = list->next;
+	listint_t *head = list, *next = list->next;
 
-	if (list == NULL || list->next == NULL)
+	while (head && next)
 	{
-		return (0);
-	}
-
-	while (current)
-	{
-		if (current == head)
+		if (next == head)
 		{
 			return (1);
 		}
-		current = current->next;
+		next = next->next;
 	}
 
 	return (0);
