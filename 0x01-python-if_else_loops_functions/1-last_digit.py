@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 numberType = ""
-n = 0
+n = 10
 
 if number > 0:
     n = 10
