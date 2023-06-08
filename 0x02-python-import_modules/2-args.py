@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 if __name__ == "__main__":
-    i = 1
-    argv_len = len(sys.argv) - 1
+    argv_len = len(argv) - 1
     if argv_len == 0:
         print(f"{argv_len:d} arguments.")
     else:
@@ -10,8 +9,5 @@ if __name__ == "__main__":
             print(f"{argv_len:d} argument:")
         else:
             print(f"{argv_len:d} arguments:")
-        for arg in sys.argv:
-            if arg == sys.argv[0]:
-                continue
-            print(f"{i}: {arg}")
-            i += 1
+        for i in range(1, argv_len + 1):
+            print(f"{i}: {argv[i]}")
