@@ -11,5 +11,7 @@ if __name__ == "__main__":
         else:
             print(f"{argv_len:d} arguments:")
         for arg in sys.argv:
+            if arg == sys.argv[0]:
+                continue
             print(f"{i}: {arg}")
             i += 1
