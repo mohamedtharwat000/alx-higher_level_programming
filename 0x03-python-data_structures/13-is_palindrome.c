@@ -14,6 +14,11 @@ int is_palindrome(listint_t **head)
 	int i = 0, num_of_nodes = 0;
 	int *list_cmp = NULL;
 
+	if (head == NULL)
+	{
+		return (0);
+	}
+
 	while (current)
 	{
 		list_cmp = realloc(list_cmp, (num_of_nodes + 1) * sizeof(int));
