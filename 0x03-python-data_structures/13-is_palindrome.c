@@ -38,13 +38,14 @@ int is_palindrome(listint_t **head)
 		return (1);
 	}
 
-	for (i = 0; i < num_of_nodes / 2; i++)
+	while (i <= num_of_nodes / 2)
 	{
 		if (list_cmp[i] != list_cmp[num_of_nodes - 1 - i])
 		{
 			free(list_cmp);
 			return (0);
 		}
+		i++;
 	}
 
 	free(list_cmp);
