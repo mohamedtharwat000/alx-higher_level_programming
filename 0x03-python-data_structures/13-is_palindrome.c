@@ -32,7 +32,7 @@ int is_palindrome(listint_t **head)
 		num_of_nodes++;
 	}
 
-	if (num_of_nodes <= 1 || num_of_nodes % 2 != 0)
+	if (num_of_nodes == 1)
 	{
 		free(list_cmp);
 		return (1);
