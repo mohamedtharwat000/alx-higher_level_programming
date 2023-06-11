@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
 	int i = 0, num_of_nodes = 0;
-	int *list_cmp = NULL;
+	int list_cmp[1024];
 
 	if (head == NULL)
 	{
@@ -26,7 +26,6 @@ int is_palindrome(listint_t **head)
 
 	while (current)
 	{
-		list_cmp = realloc(list_cmp, (num_of_nodes + 1) * sizeof(int));
 		list_cmp[num_of_nodes] = current->n;
 		current = current->next;
 		num_of_nodes++;
@@ -34,7 +33,6 @@ int is_palindrome(listint_t **head)
 
 	if (num_of_nodes == 1)
 	{
-		free(list_cmp);
 		return (1);
 	}
 
@@ -42,12 +40,10 @@ int is_palindrome(listint_t **head)
 	{
 		if (list_cmp[i] != list_cmp[num_of_nodes - 1 - i])
 		{
-			free(list_cmp);
 			return (0);
 		}
 		i++;
 	}
 
-	free(list_cmp);
 	return (1);
 }
