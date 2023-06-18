@@ -11,7 +11,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
-	int i = 0, num_of_nodes = 0;
+	long unsigned int i = 0, num_of_nodes = 0;
 	int *list_cmp = NULL;
 
 	if (head == NULL)
