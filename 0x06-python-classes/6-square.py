@@ -1,21 +1,20 @@
 #!/usr/bin/python3
 
 """
-    Square class
+Square class
 """
 
 
 class Square:
     """
-    Define a square
+    Square - class that define a square
     """
     def __init__(self, size=0, position=(0, 0)):
         """
-        init method
-        @size (int): size of the square
-        @position (tuple): position of the square
-
-        @return: None
+        __init__ - class constructor
+        Args:
+            size (int): size of the square
+            position (tuple): position of the square
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -35,7 +34,8 @@ class Square:
     def size(self):
         """
         size - method that returns the current square size
-        @return: the current square size
+        Returns:
+            int: the current square size
         """
         return self.__size
 
@@ -43,8 +43,8 @@ class Square:
     def size(self, value):
         """
         size - method that sets the current square size
-        @value (int): size of the square
-        @return: None
+        Args:
+            value (int): size of the square
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -57,16 +57,17 @@ class Square:
     def position(self):
         """
         position - method that returns the current square position
-        @return: the current square position
+        Returns:
+            tuple: position of the square
         """
-        return self.__positionself
+        return self.__position
 
     @position.setter
     def position(self, value):
         """
         position - method that sets the current square position
-        @value (tuple): position of the square
-        @return: None
+        Args:
+            value (tuple): position of the square
         """
         if type(value) is not tuple or len(value) != 2 or \
            type(value[0]) is not int or type(value[1]) is not int or \
@@ -77,15 +78,15 @@ class Square:
 
     def area(self):
         """
-        Area - method that returns the current square area
-        @return: the current square area
+        area - method that returns the current square area
+        Returns:
+            int: the current square area
         """
         return (self.__size * self.__size)
 
     def my_print(self):
         """
-        Print - method that prints in stdout the square with the character #
-        @return: None
+        my_print - method that prints in stdout the square with the character #
         """
         if self.__size == 0:
             print()

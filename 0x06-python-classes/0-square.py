@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
 """
-    Square class
+Square class
 """
 
 
 class Square:
     """
-    Define a square
+    Square - class that define a square
     """
     pass
