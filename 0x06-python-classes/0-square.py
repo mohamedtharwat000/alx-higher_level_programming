@@ -4,6 +4,6 @@
 """
 class Square:
     """
-    Square class
+    Define a square
     """
     pass
