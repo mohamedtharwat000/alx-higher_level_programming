@@ -4,10 +4,12 @@
 """
 class Square:
     """
-    Square class
+    Define a square
     """
     def __init__(self, size):
         """
-        init
+        init method
+        @size: size of the square
+        @return: None
         """
-        __size = size
+        self.__size = size
