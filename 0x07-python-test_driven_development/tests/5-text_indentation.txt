@@ -15,8 +15,10 @@ Hello.
 How are you?
 <BLANKLINE>
 
->>> text_indentation("Hello. How are you: John")
-Hello.
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
 <BLANKLINE>
 How are you:
 <BLANKLINE>
