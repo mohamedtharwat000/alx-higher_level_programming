@@ -22,7 +22,7 @@ def text_indentation(text):
             print()
             new_line = True
         else:
-            if text[i] == ' ' and new_line == True:
+            if text[i] == ' ' and new_line is True:
                 continue
             else:
                 print(text[i], end='')
