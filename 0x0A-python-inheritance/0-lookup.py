@@ -4,6 +4,7 @@
     module for the lookup(obj) function
 """
 
+
 def lookup(obj):
     """
         lookup - function that takes an object as argument and returns
