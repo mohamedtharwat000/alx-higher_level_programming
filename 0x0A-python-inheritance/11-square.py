@@ -3,7 +3,7 @@
 """
     module for the class Square.
 """
-Rectangle = __import__('10-rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -19,10 +19,10 @@ class Square(Rectangle):
                 TypeError: if size is not an integer
                 ValueError: if size is <= 0
         """
+        self.integer_validator("size", size)
         self.__size = size
-        self.integer_validator("size", self.__size)
 
-        super().__init__(size, size)
+        super().__init__(self.__size, self.__size)
 
     def area(self):
         """
