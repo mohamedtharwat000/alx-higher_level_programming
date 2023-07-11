@@ -20,6 +20,11 @@ Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
+>>> bg.area(0)
+Traceback (most recent call last):
+    ...
+TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+
 --------------------------------------------------------------------------------
 # test integer_validator method
 --------------------------------------------------------------------------------
