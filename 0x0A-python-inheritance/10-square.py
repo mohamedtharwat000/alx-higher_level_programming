@@ -19,10 +19,10 @@ class Square(Rectangle):
                 TypeError: if size is not an integer
                 ValueError: if size is <= 0
         """
+        super().__init__(self.__size, self.__size)
+
         self.integer_validator("size", size)
         self.__size = size
-
-        Rectangle.__init__(self, self.__size, self.__size)
 
     def area(self):
         """
