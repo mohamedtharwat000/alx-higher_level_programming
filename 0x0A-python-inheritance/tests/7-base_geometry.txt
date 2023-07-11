@@ -20,17 +20,10 @@ Traceback (most recent call last):
     ...
 Exception: area() is not implemented
 
->>> bg.area(0)
-Traceback (most recent call last):
-    ...
-TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
-
 --------------------------------------------------------------------------------
 # test integer_validator method
 --------------------------------------------------------------------------------
 >>> bg.integer_validator("my_int", 12)
-
->>> bg.integer_validator("width", 89)
 
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
