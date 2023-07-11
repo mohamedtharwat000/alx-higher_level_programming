@@ -8,10 +8,21 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 --------------------------------------------------------------------------------
-# test area and integer_validator methods
+# create bg object that is instance of BaseGeometry class
 --------------------------------------------------------------------------------
 >>> bg = BaseGeometry()
 
+--------------------------------------------------------------------------------
+# test area method
+--------------------------------------------------------------------------------
+>>> bg.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+
+--------------------------------------------------------------------------------
+# test integer_validator method
+--------------------------------------------------------------------------------
 >>> bg.integer_validator("my_int", 12)
 
 >>> bg.integer_validator("width", 89)
@@ -30,8 +41,3 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
     ...
 ValueError: distance must be greater than 0
-
->>> bg.area()
-Traceback (most recent call last):
-    ...
-Exception: area() is not implemented
