@@ -20,10 +20,10 @@ class Rectangle(BaseGeometry):
                 TypeError: if width or height are not integers
                 ValueError: if width or height are <= 0
         """
-        self.__width = width
-        self.__height = height
         self.integer_validator("width", width)
         self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """
