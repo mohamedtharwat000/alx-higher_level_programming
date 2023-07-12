@@ -12,4 +12,4 @@ def class_to_json(obj):
         simple data structure (list, dictionary, string, integer and boolean)
         for JSON serialization of an object:
     """
-    return json.dumps(obj, default=lambda o: o.__dict__)
+    return (obj.__dict__)
