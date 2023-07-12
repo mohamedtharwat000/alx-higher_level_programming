@@ -33,4 +33,4 @@ class Student:
                 json (dict): json to use
         """
         for k, v in json.items():
-            self.k = v
+            self.__dict__[k] = v
