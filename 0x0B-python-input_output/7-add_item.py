@@ -16,7 +16,7 @@ if __name__ == "__main__":
     try:
         list_exist = load_from_json_file("add_arg.json")
     except FileNotFoundError:
-        save_to_json_file(list_args, "add_arg.json")
-    else:
+        list_exist = []
+    finally:
         list_exist += list_args
         save_to_json_file(list_exist, "add_arg.json")
