@@ -14,9 +14,9 @@ if __name__ == "__main__":
     for arg in sys.argv[1:]:
         list_args.append(arg)
     try:
-        list_exist = load_from_json_file("add_arg.json")
+        list_exist = load_from_json_file("add_item.json")
     except FileNotFoundError:
-        list_exist = []
-    finally:
-        list_exist += list_args
-        save_to_json_file(list_exist, "add_arg.json")
+        save_to_json_file(list_args, "add_item.json")
+    else:
+        list_exist.extend(list_args)
+        save_to_json_file(list_exist, "add_item.json")
