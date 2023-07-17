@@ -1,9 +1,8 @@
 #!/usr/bin/python3
+
 """
     Module contains class Square
 """
-
-
 from models.rectangle import Rectangle
 
 

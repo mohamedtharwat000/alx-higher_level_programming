@@ -1,9 +1,8 @@
 #!/usr/bin/python3
+
 """
     Module contains class Rectangle
 """
-
-
 from models.base import Base
 
 
