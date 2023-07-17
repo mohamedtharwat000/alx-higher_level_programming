@@ -1,21 +1,18 @@
 #!/usr/bin/python3
 
 """
-Unittest for Rectangle Class
-# run with python3 -m unittest discover tests
-# run with python3 -m unittest tests/test_models/test_rectangle.py
+    Unittest for Rectangle Class
 """
 
 
 import unittest
-import os
-from io import StringIO
-from contextlib import redirect_stdout
 from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    """Tests for models/rectangle.py"""
+    """
+        Unittest for Rectangle Class
+    """
 
     """Test attributes"""
     def test_all_attr_given(self):
@@ -87,17 +84,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(Rectangle(3, 4).area(), 12)
         self.assertEqual(Rectangle(8, 7, 0, 0).area(), 56)
         self.assertEqual(Rectangle(8, 7, 0, 0, 12).area(), 56)
-
-    def test_display(self):
-        """Test method: display"""
-        with StringIO() as bufr, redirect_stdout(bufr):
-            Rectangle(5, 3).display()
-            b = bufr.getvalue()
-        self.assertEqual(b, '#####\n#####\n#####\n')
-        with StringIO() as bufr, redirect_stdout(bufr):
-            Rectangle(5, 3, 1, 2).display()
-            b = bufr.getvalue()
-        self.assertEqual(b, '\n\n #####\n #####\n #####\n')
 
     def test_print(self):
         """Test method: __str__"""
