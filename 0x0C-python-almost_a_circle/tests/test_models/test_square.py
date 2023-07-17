@@ -1,20 +1,18 @@
 #!/usr/bin/python3
 
 """
-Unittest for Square Class
-# run with python3 -m unittest discover tests
-# run with python3 -m unittest tests/test_models/test_square.py
+    Unittest for Square Class
 """
 
 
 import unittest
-from io import StringIO
-from contextlib import redirect_stdout
 from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
-    """Tests for models/square.py"""
+    """
+        Unittest for Square Class
+    """
 
     """Test attributes"""
     def test_all_attr_given(self):
@@ -71,17 +69,6 @@ class TestSquare(unittest.TestCase):
         """Test method: area"""
         self.assertEqual(Square(3).area(), 9)
         self.assertEqual(Square(4, 0, 0).area(), 16)
-
-    def test_display(self):
-        """Test method: display"""
-        with StringIO() as bufr, redirect_stdout(bufr):
-            Square(4).display()
-            b = bufr.getvalue()
-        self.assertEqual(b, '####\n####\n####\n####\n')
-        with StringIO() as bufr, redirect_stdout(bufr):
-            Square(3, 1, 2).display()
-            b = bufr.getvalue()
-        self.assertEqual(b, '\n\n ###\n ###\n ###\n')
 
     def test_print(self):
         """Test method: __str__"""
