@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 """
-Unittest for Base Class
-# run with python3 -m unittest discover tests
-# run with python3 -m unittest tests/test_models/test_base.py
+    Unittest for Base Class
 """
 
 import unittest
@@ -14,7 +12,9 @@ from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
-    """Tests for models/base.py"""
+    """
+        Unittest for Base Class
+    """
 
     def setUp(self):
         pass
