@@ -1,9 +1,9 @@
 /*
 script that uses the hbtn_0d_tvshows database to lists all genres
-of the show Dexter.
+of the Dexter show.
 */
 
--- lists all genres of the show Dexter.
+-- lists all genres of the Dexter.
 SELECT tv_genres.name
   FROM tv_genres
  INNER JOIN tv_show_genres
