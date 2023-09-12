@@ -5,9 +5,11 @@ if (args.length <= 1) {
   process.exit();
 }
 let max = args[0];
+let secondMax = max;
 for (const arg of args) {
   if (Number(arg) > max) {
+    secondMax = max;
     max = Number(arg);
   }
 }
-console.log(max);
+console.log(secondMax);
