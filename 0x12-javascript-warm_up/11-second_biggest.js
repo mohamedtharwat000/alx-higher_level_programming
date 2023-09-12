@@ -4,12 +4,6 @@ if (args.length <= 1) {
   console.log(0);
   process.exit();
 }
-let max = args[0];
-let secondMax = max;
-for (const arg of args) {
-  if (Number(arg) > max) {
-    secondMax = max;
-    max = Number(arg);
-  }
-}
-console.log(secondMax);
+args.sort((a, b) => a - b);
+args.pop();
+console.log(args.pop());
