@@ -21,7 +21,7 @@ if __name__ == '__main__':
     cursor = connection.cursor()
     cursor.execute("""
                    SELECT * FROM states
-                   WHERE {name} LIKE BINARY 'N%'
+                   WHERE name LIKE BINARY {name}
                    ORDER BY states.id ASC
                    """.format(name=state_name))
     states = cursor.fetchall()
