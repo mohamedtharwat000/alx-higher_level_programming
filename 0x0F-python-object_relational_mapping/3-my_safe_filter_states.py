@@ -19,7 +19,11 @@ if __name__ == '__main__':
 
     cursor = connection.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY states.id ASC"
+    query = """ SELECT *
+                FROM states
+                WHERE name LIKE BINARY %s
+                ORDER BY states.id ASC
+            """
     cursor.execute(query, (state_name,))
 
     states = cursor.fetchall()
