@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""script that lists all cities from the database."""
+"""takes the name of a state as an argument and lists all state cities."""
 
 import sys
 import MySQLdb
@@ -24,7 +24,7 @@ if __name__ == '__main__':
                     SELECT cities.name
                     FROM cities JOIN states
                     ON states.id=cities.state_id
-                    WHERE states.name = {}
+                    WHERE states.name='{}'
                     ORDER BY cities.id ASC
                     """.format(state_name)
                 )
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     city_names = [city[0] for city in cities]
     formatted_cities = ", ".join(city_names)
 
-    print(city_names)
+    print(formatted_cities)
 
     cursor.close()
     connection.close()
