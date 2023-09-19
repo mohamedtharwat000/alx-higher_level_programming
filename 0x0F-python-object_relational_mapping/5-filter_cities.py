@@ -29,10 +29,11 @@ if __name__ == '__main__':
                     """.format(state_name)
                 )
 
-    states = cursor.fetchall()
+    cities = cursor.fetchall()
 
-    for state in states:
-        print(state)
+    city_names = [city[0] for city in cities]
+
+    print(city_names)
 
     cursor.close()
     connection.close()
