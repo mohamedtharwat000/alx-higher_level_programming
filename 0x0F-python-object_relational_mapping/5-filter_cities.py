@@ -32,6 +32,7 @@ if __name__ == '__main__':
     cities = cursor.fetchall()
 
     city_names = [city[0] for city in cities]
+    formatted_cities = ", ".join(city_names)
 
     print(city_names)
 
