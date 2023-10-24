@@ -9,9 +9,14 @@ request(apiUrl, (error, response, body) => {
     console.log(error);
     return;
   }
-  const data = JSON.parse(body);
-  const wedgeAntillesMovies = data.results.filter((movie) =>
-    movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')
-  );
-  console.log(wedgeAntillesMovies.length);
+  let count = 0;
+  const results = JSON.parse(body).results;
+  for (const film of results) {
+    for (const character of film.characters) {
+      if (character.includes('18')) {
+        count++;
+      }
+    }
+  }
+  console.log(count);
 });
