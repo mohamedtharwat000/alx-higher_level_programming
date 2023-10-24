@@ -14,6 +14,6 @@ request(apiUrl, (error, response, body) => {
         'https://swapi-api.alx-tools.com/api/people/18/'
       )
     );
-    console.log(wedgeAntillesMovies.length);
+    console.log(wedgeAntillesMovies.length || 0);
   }
 });
