@@ -19,12 +19,10 @@ request(apiUrl, (error, response, body) => {
     const userId = todo.userId;
     if (taskCountPerUser[userId]) {
       taskCountPerUser[userId]++;
-    } else {
-      taskCountPerUser[userId] = 1;
+      return;
     }
+    taskCountPerUser[userId] = 1;
   });
 
-  const jsonString = JSON.stringify(taskCountPerUser);
-
-  console.log(jsonString);
+  console.log(taskCountPerUser);
 });
